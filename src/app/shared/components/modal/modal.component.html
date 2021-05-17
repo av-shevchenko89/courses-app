@@ -1,0 +1,9 @@
+<div class="container">
+    <mat-icon class="close-btn" mat-dialog-close>close</mat-icon>
+    <h1 mat-dialog-title>{{ data.title }}</h1>
+    <p mat-dialog-content>{{ data.message}}</p>
+    <mat-dialog-actions align="end">
+        <button mat-button [mat-dialog-close]="false">{{ data.cancelButtonText }}</button>
+        <button mat-button [mat-dialog-close]="true">{{ data.okButtonText }}</button>
+    </mat-dialog-actions>
+</div>

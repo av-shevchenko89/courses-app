@@ -1,0 +1,12 @@
+<div class="courses">
+    <app-header></app-header>
+
+    <div class="actions">
+        <app-button btnText="Show modal" (click)="showModal()"></app-button>
+    </div>
+
+    <app-course-list
+            [courses]="courses"
+            [editable]="editable"
+    ></app-course-list>
+</div>

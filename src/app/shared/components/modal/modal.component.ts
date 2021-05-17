@@ -1,0 +1,22 @@
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+interface ModalData {
+  title: string;
+  message: string;
+  okButtonText: string;
+  cancelButtonText: string;
+}
+
+@Component({
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrls: [ './modal.component.css' ],
+})
+export class ModalComponent {
+
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: ModalData,
+  ) { }
+
+}
