@@ -8,7 +8,7 @@
             <strong>Authors: </strong> {{ course.authors.join(', ') }}
         </p>
         <p>
-            <strong>Duration:</strong> {{ durToTime(course.duration) }}
+            <strong>Duration:</strong> {{ course.duration | duration }} hours
         </p>
         <p>
             <strong>Created:</strong> {{ course.creationDate | date: 'dd.MM.yyyy' }}
