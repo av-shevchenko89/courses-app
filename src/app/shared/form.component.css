@@ -23,3 +23,6 @@ form ::ng-deep .mat-form-field {
     color: #483d8b;
 }
 
+form ::ng-deep .mat-form-field-suffix {
+    cursor: pointer;
+}

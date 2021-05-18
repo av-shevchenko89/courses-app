@@ -36,9 +36,10 @@
     </div>
 
     <div>
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" appToggle #t="toggle">
             <mat-label>Password</mat-label>
             <input matInput type="password" name="password" formControlName="password" required>
+            <mat-icon matSuffix (click)="t.changeType()">visibility</mat-icon>
             <mat-error *ngIf="fc.password.invalid && (fc.password.dirty || fc.password.touched || regForm.submitted)">
                 <div *ngIf="fc.password.errors.required">
                     Password is required
@@ -52,6 +53,9 @@
     </button>
 
     <div class="info">
-        <p>If you have an account, you can <a>Login</a></p>
+        <p>
+            If you have an account, you can
+            <a routerLink="/login">Login</a>
+        </p>
     </div>
 </form>

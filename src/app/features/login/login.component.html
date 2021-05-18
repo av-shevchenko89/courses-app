@@ -22,10 +22,11 @@
     </div>
 
     <div>
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" appToggle #t="toggle">
             <mat-label>Password</mat-label>
             <input matInput type="password" id="password" name="password" required
                    [(ngModel)]="login.password" #password="ngModel">
+            <mat-icon matSuffix (click)="t.changeType()">visibility</mat-icon>
             <mat-error *ngIf="password.invalid && (password.dirty || password.touched || loginForm.submitted)">
                 <div *ngIf="password.errors.required">
                     Password is required
@@ -40,6 +41,6 @@
 
     <div class="info">
         <p>If you don't have an account, you can</p>
-        <a>Registration</a>
+        <a routerLink="/registration">Registration</a>
     </div>
 </form>
