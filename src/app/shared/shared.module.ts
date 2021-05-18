@@ -1,32 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
-import { ButtonComponent, HeaderComponent, InfoComponent, ModalComponent, SearchComponent } from './components';
-import { EmailValidator } from './directives';
-
-const COMPONENTS = [
-  HeaderComponent,
-  ButtonComponent,
-  InfoComponent,
-  SearchComponent,
-  ModalComponent,
-];
-
-const DIRECTIVES = [ EmailValidator ];
+import { ComponentsModule } from './components/components.module';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
-  declarations: [
-    ...COMPONENTS,
-    ...DIRECTIVES,
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     MaterialModule,
+    ComponentsModule,
+    DirectivesModule,
   ],
   exports: [
-    ...COMPONENTS,
-    ...DIRECTIVES,
     MaterialModule,
+    ComponentsModule,
+    DirectivesModule,
   ],
 })
 export class SharedModule {}

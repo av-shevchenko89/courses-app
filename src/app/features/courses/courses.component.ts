@@ -4,6 +4,7 @@ import { Course } from './course';
 
 import { mockedCourseList } from '../../../assets/mocks.js';
 import { ModalComponent } from '../../shared/components';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -16,6 +17,7 @@ export class CoursesComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -36,4 +38,7 @@ export class CoursesComponent implements OnInit {
     dialogRef.afterClosed().subscribe(res => console.log(res));
   }
 
+  goTo(id: string): void {
+    this.router.navigate(['course', id]);
+  }
 }
