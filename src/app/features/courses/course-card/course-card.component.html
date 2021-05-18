@@ -5,13 +5,13 @@
     </mat-card-header>
     <mat-card-content class="info">
         <p>
-            <strong>Authors: </strong> {{ course.authors.join(', ') }}
+            <strong>Authors: </strong> {{ course.authors | stringJoiner: ', ' }}
         </p>
         <p>
             <strong>Duration:</strong> {{ course.duration | duration }} hours
         </p>
         <p>
-            <strong>Created:</strong> {{ course.creationDate | date: 'dd.MM.yyyy' }}
+            <strong>Created:</strong> {{ course.creationDate | creationDate }}
         </p>
         <mat-card-actions class="buttons">
             <ng-content></ng-content>

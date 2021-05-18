@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DurationPipe } from './duration.pipe';
+import { DurationPipe } from './duration/duration.pipe';
+import { CreationDatePipe } from './creation-date/creation-date.pipe';
+import { StringJoinerPipe } from './string-joiner/string-joiner.pipe';
 
 const PIPES = [
-  DurationPipe
+  DurationPipe,
+  CreationDatePipe,
+  StringJoinerPipe,
 ];
 
 @NgModule({
