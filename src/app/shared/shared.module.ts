@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
 import { ButtonComponent, HeaderComponent, InfoComponent, ModalComponent, SearchComponent } from './components';
-import { EmailValidatorDirective } from './directives';
+import { EmailValidator } from './directives';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -12,7 +12,7 @@ const COMPONENTS = [
   ModalComponent,
 ];
 
-const DIRECTIVES = [ EmailValidatorDirective ];
+const DIRECTIVES = [ EmailValidator ];
 
 @NgModule({
   declarations: [
