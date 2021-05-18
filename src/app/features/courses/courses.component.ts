@@ -17,7 +17,7 @@ export class CoursesComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +39,10 @@ export class CoursesComponent implements OnInit {
   }
 
   goTo(id: string): void {
-    this.router.navigate(['course', id]);
+    this.router.navigate([ 'course', id ]);
+  }
+
+  search(val: string): void {
+    console.log(val);
   }
 }

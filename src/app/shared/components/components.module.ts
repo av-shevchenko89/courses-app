@@ -6,6 +6,7 @@ import { SearchComponent } from './search/search.component';
 import { ModalComponent } from './modal/modal.component';
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -19,7 +20,8 @@ const COMPONENTS = [
   declarations: COMPONENTS,
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
   ],
   exports: COMPONENTS,
 })
