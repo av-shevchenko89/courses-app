@@ -1,0 +1,25 @@
+h2 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+form ::ng-deep .mat-form-field {
+    width: 25%;
+    min-width: 250px;
+    margin-bottom: 10px;
+}
+
+.info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.info a {
+    cursor: pointer;
+    color: #483d8b;
+}
+
