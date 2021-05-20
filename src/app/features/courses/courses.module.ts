@@ -6,6 +6,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseListComponent } from './course-list/course-list.component';
 
 import { SharedModule } from '../../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
+    RouterModule,
   ],
   exports: [
     CoursesComponent,

@@ -19,4 +19,9 @@ export class SearchComponent implements OnInit {
   submit(): void {
     this.search.emit(this.searchVal);
   }
+
+  clear(): void {
+    this.searchVal = '';
+    this.submit();
+  }
 }

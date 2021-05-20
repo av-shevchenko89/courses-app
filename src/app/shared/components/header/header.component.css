@@ -1,9 +1,5 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border: 1px solid #ff4500;
-    margin-bottom: 20px;
+.space {
+    flex: 1 1 auto;
 }
 
 .logo {

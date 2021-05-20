@@ -43,7 +43,7 @@ export class CourseFormComponent implements OnInit {
   }
 
   addAuthor(): void {
-    const newAuthor = this.authorName.value;
+    const newAuthor = this.authorName.value.trim();
     this.authors.push(this.fb.control(newAuthor));
 
     this.authorName.patchValue('');

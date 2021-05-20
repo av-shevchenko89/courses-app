@@ -1,4 +1,4 @@
-import { AfterViewInit, Directive, ElementRef } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appToggle]',
@@ -9,7 +9,10 @@ export class ToggleDirective implements AfterViewInit {
   private inputEl: HTMLInputElement;
   private iconEl: Element;
 
-  constructor(private el: ElementRef) { }
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2
+  ) { }
 
   ngAfterViewInit(): void {
     this.inputEl = this.el.nativeElement.querySelector('input');
@@ -18,8 +21,8 @@ export class ToggleDirective implements AfterViewInit {
 
   changeType(): void {
     this.hidden = !this.hidden;
-    this.inputEl.type = this.hidden ? 'password' : 'text';
-    this.iconEl.innerHTML = this.hidden ? 'visibility' : 'visibility_off';
+    this.renderer.setAttribute(this.inputEl, 'type', this.hidden ? 'password' : 'text');
+    this.renderer.setProperty(this.iconEl, 'innerHTML', this.hidden ? 'visibility' : 'visibility_off');
   }
 
 }

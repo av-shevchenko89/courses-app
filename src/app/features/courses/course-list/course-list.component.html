@@ -1,5 +1,5 @@
 <div class="course-list">
-    <app-course-card *ngFor="let course of courses" [course]="course">
+    <app-course-card *ngFor="let course of courses | search: searchVal" [course]="course">
         <app-button btnText="Show course" (click)="goToCourse(course.id)"></app-button>
         <app-button *ngIf="editable" iconName="edit"></app-button>
         <app-button *ngIf="editable" iconName="delete"></app-button>

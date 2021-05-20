@@ -39,13 +39,15 @@
                         </div>
                     </mat-error>
                 </mat-form-field>
-                <button mat-stroked-button type="button" (click)="addAuthor()">Create author</button>
+                <button mat-stroked-button type="button"
+                        [disabled]="!authorName.value.trim()" (click)="addAuthor()">
+                    Create author
+                </button>
             </div>
 
             <div formArrayName="authors">
                 <h4>Authors list</h4>
-<!--                <div *ngIf="authors.controls.length && authors.controls[0].value">-->
-                <div>
+                <div *ngIf="authors.controls.length">
                     <label *ngFor="let author of authors.controls; let i=index" class="author">
                         <input matInput type="text" [formControlName]="i">
                         <button mat-stroked-button type="button" (click)="removeAuthor(i)">Delete author</button>

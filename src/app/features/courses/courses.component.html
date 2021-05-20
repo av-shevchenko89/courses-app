@@ -1,4 +1,6 @@
-<app-header></app-header>
+<app-header>
+    <a routerLink="/login">Login</a>
+</app-header>
 
 <div class="actions">
     <app-button btnText="Add new course" (click)="goTo('new')"></app-button>
@@ -12,5 +14,6 @@
 <app-course-list
         [courses]="courses"
         [editable]="editable"
+        [searchVal]="searchVal"
         (toCourse)="goTo($event)"
 ></app-course-list>

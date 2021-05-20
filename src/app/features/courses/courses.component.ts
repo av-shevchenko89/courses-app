@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Course } from './course';
+import { Course } from '../../models/course';
 
 import { mockedCourseList } from '../../../assets/mocks.js';
 import { ModalComponent } from '../../shared/components';
@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class CoursesComponent implements OnInit {
   courses: Course[] = [];
   editable = true;
+  searchVal = '';
 
   constructor(
     public dialog: MatDialog,
@@ -43,6 +44,6 @@ export class CoursesComponent implements OnInit {
   }
 
   search(val: string): void {
-    console.log(val);
+    this.searchVal = val;
   }
 }
